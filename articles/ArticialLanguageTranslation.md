@@ -23,7 +23,7 @@ While the resulting translations are an interesting technical result in itself, 
 
 ## What we will Show
 ## Why it Matters
-###Integration 
+### Integration 
 
 Applications store their data in different formats, typically in different formats like tables or files. Different Databases have different Data models (names of tables, fields and relations between tables), while often semantically they refer to the same concepts. For example an Enterprise Resource Planning like SAP has a concept of a Client, a Customer Relatioship Management System like Salesforce holds Data about the very same client. However, the representation of the Client differs technically. In practice syncing such Systems is a painful, manual exercise, which constitutes a large market and even give a part of the Technical Consulting Industry the name ‘System Integrators’. 
 
@@ -32,7 +32,7 @@ The high costs linked to translating different dataformats often lead to central
 The approach might just as well be used to translate typical data exchange formats like XML or JSON into each other. Also, such translations could help translating generic algorithms and libraries. The complexity of the latter might put this rather on the roadmap for a later stage. The former use-case will actually need to make a lot of assumptions about the intention of a message between applications. Message can be meant to acknowledge another message was received, that can mean ‘update my bank account’ / ‘send an email’ / ‘print a report’ ‘run a batch job’ and so on. ‘Intents’ just like self - consciousness is nothing Artificial Intelligence is even close to achieve. Contrary to popular culture, where e.g. a Terminator seems to be self consciousness, we really have no idea how to achieve that. Artificial Intelligence in the Form of Neural Networks for Language Translation is about pattern recognition based typically labelled data reflecting the past.
 Instead of making lots of different assumptions on intentions, it is easier to make one generic assumption ‘Sync as much data as possible’ What to do how to ‘interpret’ that data is then entirely up to the receiving algorithm, that might be a conventional algorithm or a smart learning algorithm like a neural network.
 
-###Decentralisation
+### Decentralisation
 
 This might be controversial, but it was the authors initial motivation and is still a valid point.
 Quote your own article, reference the ethereum folks.
@@ -41,16 +41,14 @@ https://cointelegraph.com/news/why-ethereum-style-blockchains-do-not-really-dece
 
 While Bitcoin as a payment system is clearly decentralising such that we do not need Banks in payment traffic, I I doubt using a crypto platform to build a generic application form (‘programmable money’) is a good idea. The problem is that this implies, exaclt one programming model or for that matter one programming model the ethereum community deems feasible is the ‘one blockchain to rule them all’. But we do not want one blockchains (whatever the usecases maybe beyond offering a potentially censor resistant platform), we do not even want one kind of Application platform dominating. That sounds all too familiar from facebook, google and the likes - just the kind of ‘data-banks’ any bitcoin inspired mentality shound want to elimiante. Ethereum - notwithstanding the good intentions of the founding community - therefore amounts to nothing other than a dystopian form of a developer and community monopoly and it is not clear what we win over a CEO and capital dominated platofrm. The real way to achieve decetralisation is to not build an application platform but rather platform that would be able integrating different applications of any kind. Hence, the real de-centralisation problem is one of letting applications - that run on whatever cloud or on premise platform the founders choose - communicate seamlessly. A problem to which this article tries to contribute towards a solution.
 
-###Artificial Social Intelligence
+### Artificial Social Intelligence
 
 Turing test should demand: two Turing machines can figure out a way to communicate. This approach here helps passing that.
 
 https://www.csee.umbc.edu/courses/471/papers/turing.pdf
-##Approach
+## Approach
 
-
-###Preparations
-###The Data set
+### The Data set
 
 https://www.w3schools.com/python/python_mysql_create_db.asp
 
