@@ -1,351 +1,106 @@
-## MacDown
+-- Take out later
+# Follow this: 
 
-![MacDown logo](http://macdown.uranusjr.com/static/images/logo-160.png)
+http://course.fast.ai/lessons/lesson11.html as of minute 4
+http://forums.fast.ai/t/part-2-lesson-11-wiki/14699
 
-Hello there! I’m **MacDown**, the open source Markdown editor for OS X.
+This is the prereq:
+lesson 6: http://course.fast.ai/lessons/lesson6.html
+http://forums.fast.ai/t/wiki-lesson-6/9404
 
-Let me introduce myself.
+http://localhost:8892/notebooks/ALPNotebook/Artificial%20Language%20Processing.ipynb#Initial-Model
 
+/Users/bherudek/Desktop/deep learning
+jupyter notebook
 
 
-## Markdown and I
-
-**Markdown** is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found [here](http://daringfireball.net/projects/markdown/syntax).
-
-**MacDown** is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.
-
-![MacDown Screenshot](http://d.pr/i/10UGP+)
-
-I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the [**Markdown** preference pane](#markdown-pane).
-
-You can specify extra HTML rendering options through the [**Rendering** preference pane](#rendering-pane).
-
-You can customize the editor window to you liking in the [**Editor** preferences pane](#editor-pane):
-
-You can configure various application (that's me!) behaviors in the [**General** preference pane](#general-pane).
-
-## The Basics
-Before I tell you about all the extra syntaxes and capabilities I have, I'll introduce you to the basics of standard markdown. If you already know markdown, and want to jump straight to learning about the fancier things I can do, I suggest you skip to the [**Markdown** preference pane](#markdown-pane). Lets jump right in.  
-
-### Line Breaks
-To force a line break, put two spaces and a newline (return) at the end of the line.
-
-* This two-line bullet 
-won't break
-
-* This two-line bullet  
-will break
-
-Here is the code:
-
-```
-* This two-line bullet 
-won't break
-
-* This two-line bullet  
-will break
-```
-
-### Strong and Emphasize
-
-**Strong**: `**Strong**` or `__Strong__` (Command-B)  
-*Emphasize*: `*Emphasize*` or `_Emphasize_`[^emphasize] (Command-I)
-
-### Headers (like this one!)
-
-	Header 1
-	========
-
-	Header 2
-	--------
-
-or
-
-	# Header 1
-	## Header 2
-	### Header 3
-	#### Header 4
-	##### Header 5
-	###### Header 6
-
-
-
-### Links and Email
-#### Inline
-Just put angle brackets around an email and it becomes clickable: <uranusjr@gmail.com>  
-`<uranusjr@gmail.com>`  
-
-Same thing with urls: <http://macdown.uranusjr.com>  
-` <http://macdown.uranusjr.com>`  
-
-Perhaps you want to some link text like this: [Macdown Website](http://macdown.uranusjr.com "Title")  
-`[Macdown Website](http://macdown.uranusjr.com "Title")` (The title is optional)  
-
-
-#### Reference style
-Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  
-
-Make [a link][arbitrary_id] `[a link][arbitrary_id]` then on it's own line anywhere else in the file:  
-`[arbitrary_id]: http://macdown.uranusjr.com "Title"`
-  
-If the link text itself would make a good id, you can link [like this][] `[like this][]`, then on it's own line anywhere else in the file:  
-`[like this]: http://macdown.uranusjr.com`  
-
-[arbitrary_id]: http://macdown.uranusjr.com "Title"
-[like this]: http://macdown.uranusjr.com  
-
-
-### Images
-#### Inline
-`![Alt Image Text](path/or/url/to.jpg "Optional Title")`
-#### Reference style
-`![Alt Image Text][image-id]`  
-on it's own line elsewhere:  
-`[image-id]: path/or/url/to.jpg "Optional Title"`
-
-
-### Lists
-
-* Lists must be preceded by a blank line (or block element)
-* Unordered lists start each item with a `*`
-- `-` works too
-	* Indent a level to make a nested list
-		1. Ordered lists are supported.
-		2. Start each item (number-period-space) like `1. `
-		42. It doesn't matter what number you use, I will render them sequentially
-		1. So you might want to start each line with `1.` and let me sort it out
-
-Here is the code:
-
-```
-* Lists must be preceded by a blank line (or block element)
-* Unordered lists start each item with a `*`
-- `-` works too
-	* Indent a level to make a nested list
-		1. Ordered lists are supported.
-		2. Start each item (number-period-space) like `1. `
-		42. It doesn't matter what number you use, I will render them sequentially
-		1. So you might want to start each line with `1.` and let me sort it out
-```
-
-
-
-### Block Quote
-
-> Angle brackets `>` are used for block quotes.  
-Technically not every line needs to start with a `>` as long as
-there are no empty lines between paragraphs.  
-> Looks kinda ugly though.
-> > Block quotes can be nested.  
-> > > Multiple Levels
->
-> Most markdown syntaxes work inside block quotes.
->
-> * Lists
-> * [Links][arbitrary_id]
-> * Etc.
-
-Here is the code:
-
-```
-> Angle brackets `>` are used for block quotes.  
-Technically not every line needs to start with a `>` as long as
-there are no empty lines between paragraphs.  
-> Looks kinda ugly though.
-> > Block quotes can be nested.  
-> > > Multiple Levels
->
-> Most markdown syntaxes work inside block quotes.
->
-> * Lists
-> * [Links][arbitrary_id]
-> * Etc.
-```
-  
-  
-### Inline Code
-`Inline code` is indicated by surrounding it with backticks:  
-`` `Inline code` ``
-
-If your ``code has `backticks` `` that need to be displayed, you can use double backticks:  
-```` ``Code with `backticks` `` ````  (mind the spaces preceding the final set of backticks)
-
-
-### Block Code
-If you indent at least four spaces or one tab, I'll display a code block.
-
-	print('This is a code block')
-	print('The block must be preceded by a blank line')
-	print('Then indent at least 4 spaces or 1 tab')
-		print('Nesting does nothing. Your code is displayed Literally')
-
-I also know how to do something called [Fenced Code Blocks](#fenced-code-block) which I will tell you about later.
-
-### Horizontal Rules
-If you type three asterisks `***` or three dashes `---` on a line, I'll display a horizontal rule:
-
-***
-
-
-## <a name="markdown-pane"></a>The Markdown Preference Pane
-This is where I keep all preferences related to how I parse markdown into html.  
-![Markdown preferences pane](http://d.pr/i/RQEi+)
-
-### Document Formatting
-The ***Smartypants*** extension automatically transforms straight quotes (`"` and `'`) in your text into typographer’s quotes (`“`, `”`, `‘`, and `’`) according to the context. Very useful if you’re a typography freak like I am. Quote and Smartypants are syntactically incompatible. If both are enabled, Quote takes precedence.
-
-
-### Block Formatting
-
-#### Table
-
-This is a table:
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-You can align cell contents with syntax like this:
-
-| Left Aligned  | Center Aligned  | Right Aligned |
-|:------------- |:---------------:| -------------:|
-| col 3 is      | some wordy text |         $1600 |
-| col 2 is      | centered        |           $12 |
-| zebra stripes | are neat        |            $1 |
-
-The left- and right-most pipes (`|`) are only aesthetic, and can be omitted. The spaces don’t matter, either. Alignment depends solely on `:` marks.
-
-#### <a name="fenced-code-block">Fenced Code Block</a>
-
-This is a fenced code block:
-
-```
-print('Hello world!')
-```
-
-You can also use waves (`~`) instead of back ticks (`` ` ``):
-
-~~~
-print('Hello world!')
-~~~
-
-
-You can add an optional language ID at the end of the first line. The language ID will only be used to highlight the code inside if you tick the ***Enable highlighting in code blocks*** option. This is what happens if you enable it:
-
-![Syntax highlighting example](http://d.pr/i/9HM6+)
-
-I support many popular languages as well as some generic syntax descriptions that can be used if your language of choice is not supported. See [relevant sections on the official site](http://macdown.uranusjr.com/features/) for a full list of supported syntaxes.
-
-
-### Inline Formatting
-
-The following is a list of optional inline markups supported:
-
-Option name         | Markup           | Result if enabled     |
---------------------|------------------|-----------------------|
-Intra-word emphasis | So A\*maz\*ing   | So A<em>maz</em>ing   |
-Strikethrough       | \~~Much wow\~~   | <del>Much wow</del>   |
-Underline [^under]  | \_So doge\_      | <u>So doge</u>        |
-Quote [^quote]      | \"Such editor\"  | <q>Such editor</q>    |
-Highlight           | \==So good\==    | <mark>So good</mark>  |
-Superscript         | hoge\^(fuga)     | hoge<sup>fuga</sup>   |
-Autolink            | http://t.co      | <http://t.co>         |
-Footnotes           | [\^4] and [\^4]: | [^4] and footnote 4   |
-
-[^4]: You don't have to use a number. Arbitrary things like `[^footy note4]` and `[^footy note4]:` will also work. But they will *render* as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes. 
-
-
-
-
-## <a name="rendering-pane"></a>The Rendering Preference Pane
-This is where I keep preferences relating to how I render and style the parsed markdown in the preview window.  
-![Rendering preferences pane](http://d.pr/i/rT4d+)
-
-### CSS
-You can choose different css files for me to use to render your html. You can even customize or add your own custom css files.
-
-### Syntax Highlighting
-You have already seen how I can syntax highlight your fenced code blocks. See the [Fenced Code Block](#fenced-code-block) section if you haven’t! You can also choose different themes for syntax highlighting.
-
-### TeX-like Math Syntax
-I can also render TeX-like math syntaxes, if you allow me to.[^math] I can do inline math like this: \\( 1 + 1 \\) or this (in MathML): <math><mn>1</mn><mo>+</mo><mn>1</mn></math>, and block math:
-
-\\[
-    A^T_S = B
-\\]
-
-or (in MathML)
-
-<math display="block">
-    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup>
-    <mo>=</mo>
-    <mi>B</mi>
-</math>
-
-
-
-### Task List Syntax
-1. [x] I can render checkbox list syntax
-	* [x] I support nesting
-	* [x] I support ordered *and* unordered lists
-2. [ ] I don't support clicking checkboxes directly in the html window
-
-
-### Jekyll front-matter
-If you like, I can display Jekyll front-matter in a nice table. Just make sure you put the front-matter at the very beginning of the file, and fence it with `---`. For example:
-
-```
 ---
-title: "Macdown is my friend"
-date: 2014-06-06 20:00:00
----
-```
+# Introduction
 
-### Render newline literally
-Normally I require you to put two spaces and a newline (aka return) at the end of a line in order to create a line break. If you like, I can render a newline any time you end a line with a newline. However, if you enable this, markdown that looks lovely when I render it might look pretty funky when you let some *other* program render it.
+This article describes, how we can re-use techniques from translating natural languages like english to german for translating artificial languages, used by computers into each other. Specifically, we will use the example of two SQL (standard query language) dialects (mysql and ?) on two different data models based on the fast.ai UML fit model ….
 
+While the resulting translations are an interesting technical result in itself, the main benefit is that we can automate, how applications will exchange data.
 
+## What we will Show
+## Why it Matters
+###Integration 
 
+Applications store their data in different formats, typically in different formats like tables or files. Different Databases have different Data models (names of tables, fields and relations between tables), while often semantically they refer to the same concepts. For example an Enterprise Resource Planning like SAP has a concept of a Client, a Customer Relatioship Management System like Salesforce holds Data about the very same client. However, the representation of the Client differs technically. In practice syncing such Systems is a painful, manual exercise, which constitutes a large market and even give a part of the Technical Consulting Industry the name ‘System Integrators’. 
 
+The high costs linked to translating different dataformats often lead to centralisation: to avoid the process it is best to stick with one vendor. Also, in the internet the lack of Automation adds to the rise of dominant platforms. If smaller players, lets say a social network, could seamlessly connect to each other, arguably they would be able to easier create the (in-)famous network effects necessary to grow, that is we would see ‘winner takes it all’ scenarios.
 
-## <a name="general-pane"></a>The General Preferences Pane
+The approach might just as well be used to translate typical data exchange formats like XML or JSON into each other. Also, such translations could help translating generic algorithms and libraries. The complexity of the latter might put this rather on the roadmap for a later stage. The former use-case will actually need to make a lot of assumptions about the intention of a message between applications. Message can be meant to acknowledge another message was received, that can mean ‘update my bank account’ / ‘send an email’ / ‘print a report’ ‘run a batch job’ and so on. ‘Intents’ just like self - consciousness is nothing Artificial Intelligence is even close to achieve. Contrary to popular culture, where e.g. a Terminator seems to be self consciousness, we really have no idea how to achieve that. Artificial Intelligence in the Form of Neural Networks for Language Translation is about pattern recognition based typically labelled data reflecting the past.
+Instead of making lots of different assumptions on intentions, it is easier to make one generic assumption ‘Sync as much data as possible’ What to do how to ‘interpret’ that data is then entirely up to the receiving algorithm, that might be a conventional algorithm or a smart learning algorithm like a neural network.
 
-This is where I keep preferences related to application behavior.  
-![General preferences pane](http://d.pr/i/rvwu+)
+###Decentralisation
 
-The General Preferences Pane allows you to tell me how you want me to behave. For example, do you want me to make sure there is a document open when I launch? You can also tell me if I should constantly update the preview window as you type, or wait for you to hit `command-R` instead. Maybe you prefer your editor window on the right? Or to see the word-count as you type. This is also the place to tell me if you are interested in pre-releases of me, or just want to stick to better-tested official releases.  
+This might be controversial, but it was the authors initial motivation and is still a valid point.
+Quote your own article, reference the ethereum folks.
 
-## <a name="editor-pane"></a>The Editor Preference Pane
-This is where I keep preferences related to the behavior and styling of the editing window.  
-![Editor preferences pane](http://d.pr/i/6OL5+)
+https://cointelegraph.com/news/why-ethereum-style-blockchains-do-not-really-decentralize
 
+While Bitcoin as a payment system is clearly decentralising such that we do not need Banks in payment traffic, I I doubt using a crypto platform to build a generic application form (‘programmable money’) is a good idea. The problem is that this implies, exaclt one programming model or for that matter one programming model the ethereum community deems feasible is the ‘one blockchain to rule them all’. But we do not want one blockchains (whatever the usecases maybe beyond offering a potentially censor resistant platform), we do not even want one kind of Application platform dominating. That sounds all too familiar from facebook, google and the likes - just the kind of ‘data-banks’ any bitcoin inspired mentality shound want to elimiante. Ethereum - notwithstanding the good intentions of the founding community - therefore amounts to nothing other than a dystopian form of a developer and community monopoly and it is not clear what we win over a CEO and capital dominated platofrm. The real way to achieve decetralisation is to not build an application platform but rather platform that would be able integrating different applications of any kind. Hence, the real de-centralisation problem is one of letting applications - that run on whatever cloud or on premise platform the founders choose - communicate seamlessly. A problem to which this article tries to contribute towards a solution.
 
-### Styling
+###Artificial Social Intelligence
 
-My editor provides syntax highlighting. You can edit the base font and the coloring/sizing theme. I provided some default themes (courtesy of [Mou](http://mouapp.com)’s creator, Chen Luo) if you don’t know where to start.
+Turing test should demand: two Turing machines can figure out a way to communicate. This approach here helps passing that.
 
-You can also edit, or even add new themes if you want to! Just click the ***Reveal*** button, and start moving things around. Remember to use the correct file extension (`.styles`), though. I’m picky about that.
-
-I offer auto-completion and other functions to ease your editing experience. If you don’t like it, however, you can turn them off.
-
-
-
+https://www.csee.umbc.edu/courses/471/papers/turing.pdf
+##Approach
 
 
-## Hack On
+###Preparations
+###The Data set
 
-That’s about it. Thanks for listening. I’ll be quiet from now on (unless there’s an update about the app—I’ll remind you for that!).
-
-Happy writing!
+https://www.w3schools.com/python/python_mysql_create_db.asp
 
 
-[^emphasize]: If **Underlines** is turned on, `_this notation_` will render as underlined instead of emphasized 
+## Summary
 
-[^under]: If **Underline** is disabled `_this_` will be rendered as *emphasized* instead of being underlined.
+We showed, how techniques from natural language processing can be used to process artificial languages. We worked along the example of different SQL dialects on slightly differing Data Models. Two major differences two Natural Languages: It is easy to generate pairs of semantically equal statements in both languages. It is easy to check that the resulting statements are well formed according to the syntactic rules of the language. A specific challenge is the proper handling of variables, i.e. values shall never change in the translation process.
+Typical use cases can be found in Application Integration, i.e. connecting two Databases from an ERP and CRM Application and syncing data automatically. In the long run, other use cases e.g. supporting translating java libraries into python code be feasible. Translating artificial languages into each other is  contribution also to the question, whether Machines can acquire full intelligence as arguably that would entail Machines can communicate automated and self-learning, without manual intervention of humans to translate their language representations
 
-[^quote]: **Quote** replaces literal `"` characters with html `<q>` tags. **Quote** and **Smartypants** are syntactically incompatible. If both are enabled, **Quote** takes precedence. Note that **Quote** is different from *blockquote*, which is part of standard Markdown.
+## References
 
-[^math]: Internet connection required.
+http://nlp.fast.ai/category/classification.html
 
+https://arxiv.org/abs/1801.06146
+
+Neural program synthesis
+https://arxiv.org/abs/1802.02353
+
+
+Translations
+
+Which one is later and what matters more?
+
+https://github.com/fastai/fastai/blob/master/courses/dl2/translate.ipynb
+https://github.com/fastai/courses/blob/master/deeplearning2/seq2seq-translation.ipynb
+
+
+
+http://course.fast.ai/lessons/lesson10.html as of min.16.40
+http://course.fast.ai/lessons/lesson11.html
+
+
+https://github.com/fastai/courses/blob/master/deeplearning2/spelling_bee_RNN.ipynb
+
+https://github.com/fastai/courses/blob/master/deeplearning2/seq2seq-translation.ipynb
+
+
+https://github.com/fastai/courses/blob/master/deeplearning2/translate.ipynb
+https://github.com/fastai/courses/blob/master/deeplearning2/translate-pytorch.ipynb
+
+
+Some prep & background:
+http://course.fast.ai/lessons/lesson4.html  as of min. 1:23.30 
+	http://forums.fast.ai/t/wiki-lesson-4/9402
+
+https://github.com/fastai/fastai/tree/master/courses/dl1
+Language Modelling: https://github.com/fastai/fastai/blob/master/courses/dl1/lang_model-arxiv.ipynb
+https://github.com/fastai/fastai/blob/master/courses/dl1/lang_model.ipynb
+
+https://github.com/fastai/fastai/blob/master/courses/dl1/lesson4-imdb.ipynb
+https://github.com/fastai/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb
+https://github.com/fastai/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb
 
