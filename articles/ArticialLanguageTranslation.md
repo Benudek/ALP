@@ -102,3 +102,7 @@ https://github.com/fastai/fastai/blob/master/courses/dl1/lesson4-imdb.ipynb
 https://github.com/fastai/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb
 https://github.com/fastai/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb
 
+Nice graphics to understand attention:https://distill.pub/2016/augmented-rnns/
+
+Grammar as a foreign language: shows how neural net is better than rule based systemhttps://arxiv.org/abs/1412.7449
+
