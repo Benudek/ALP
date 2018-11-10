@@ -13,7 +13,7 @@ http://localhost:8892/notebooks/ALPNotebook/Artificial%20Language%20Processing.i
 /Users/bherudek/Desktop/deep learning
 jupyter notebook
 
-
+CHECK THIS: https://code.fb.com/developer-tools/getafix-how-facebook-tools-learn-to-fix-bugs-automatically/
 ---
 # Introduction
 
